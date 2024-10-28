@@ -27,3 +27,4 @@ class Book:
                 type(other) == Book and
                 self.authors == other.authors and
                 self.title == other.title)
+    "TTTTTTTT"
