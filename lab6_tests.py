@@ -65,15 +65,35 @@ class TestCases(unittest.TestCase):
 
     # Part 1
 
+    def test_selection_sort_books1(self):
+        book_list1 = [Book("WS", "Macbeth"), Book("WS", "The Tempest"), Book("WS", "Midsummer Night's Dream"), Book("SK", "Merchant of Venice")]
+        self.assertEqual(selection_sort_books(book_list1), ["Macbeth", "Merchant of Venice", "Midsummer Night's Dream", "The Tempest"])
+
+    def test_selection_sort_books2(self):
+        book_list1 = [Book("SK", "It"), Book("SK", "1963"), Book("SK", "Salem's Lot"), Book("SK", "Christine"), Book("SK", "The Shining"), Book("SK", "Misery")]
+        self.assertEqual(selection_sort_books(book_list1),
+                         ["1963", "Christine", "It", "Misery","Salem's Lot", "The Shining"])
+    
 
     # Part 2
-
-
+    def test_swap_case1(self):
+        self.assertEqual(swap_case("QwErTyUiOp"), "qWeRtYuIoP")
+    def test_swap_case2(self):
+        self.assertEqual(swap_case("Call me ISHMAL"), "cALL ME ishmal")
+        
     # Part 3
-
+    def test_str_translate1(self):
+        self.assertEqual(str_translate("banana pancakes", "a", "b"), "bbnbnb pbncbkes")
+    def test_str_translate2(self):
+        self.assertEqual(str_translate("assessment finished", "s", "t"), "attettment finithed")
 
     # Part 4
-
+    def test_histogram1(self):
+        self.assertEqual(histogram("how much wood would a wood chuck chuck if a wood chuck could chuck wood"),
+                         {"how": 1, "much": 1, "wood": 4, "would": 1, "a": 2, "chuck": 4, "if": 1, "could": 1})
+    def test_histogram2(self):
+        self.assertEqual(histogram("robot car truck truck robot toy car car truck"),
+                         {"robot": 2, "car": 3, "truck": 3, "toy": 1})
 
 
 
