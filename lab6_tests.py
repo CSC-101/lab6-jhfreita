@@ -74,15 +74,13 @@ class TestCases(unittest.TestCase):
         self.assertEqual(selection_sort_books(book_list1),
                          ["1963", "Christine", "It", "Misery","Salem's Lot", "The Shining"])
     
-        self.assertEqual(swap_case("Call me ISHMAL"), "cALL ME ishmal")
-    
-
 
     # Part 2
     def test_swap_case1(self):
         self.assertEqual(swap_case("QwErTyUiOp"), "qWeRtYuIoP")
     def test_swap_case2(self):
-
+        self.assertEqual(swap_case("Call me ISHMAL"), "cALL ME ishmal")
+        
     # Part 3
     def test_str_translate1(self):
         self.assertEqual(str_translate("banana pancakes", "a", "b"), "bbnbnb pbncbkes")
